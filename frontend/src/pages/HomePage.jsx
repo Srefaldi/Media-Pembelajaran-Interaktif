@@ -9,6 +9,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
+import FaqComponent from "../components/FaqComponent";
 
 const HomePage = () => {
   
@@ -129,6 +130,10 @@ const HomePage = () => {
             </Row>
         </Container>
     </div>
+    {/* Section Faq */}
+    <FaqComponent>
+        
+    </FaqComponent>
   </div>
   );
 }
