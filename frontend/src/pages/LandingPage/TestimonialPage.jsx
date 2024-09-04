@@ -1,8 +1,8 @@
 import {Container, Row, Col} from "react-bootstrap"
-import {testimonial} from "../data/index"
+import {testimonial} from "../../data/index"
 
 
-import FaqComponent from "../components/FaqComponent"
+import FaqComponent from "../../components/FaqComponent"
 const TestimonialPage = () => {
   return (
     <div className="testimonial-page">

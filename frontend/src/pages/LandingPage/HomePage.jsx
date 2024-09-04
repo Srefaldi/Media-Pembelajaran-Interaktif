@@ -1,6 +1,6 @@
 import {Container, Row, Col} from "react-bootstrap"
-import HeroImage from '../assets/img/hero.png'
-import { kelasTerbaru, dataSwiper } from "../data/index";
+import HeroImage from '../../assets/img/hero.png'
+import { kelasTerbaru, dataSwiper } from "../../data/index";
 import {useNavigate} from "react-router-dom"
 
 // Swiper Section 3
@@ -9,7 +9,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import { Pagination } from 'swiper/modules';
 
-import FaqComponent from "../components/FaqComponent";
+import FaqComponent from "../../components/FaqComponent";
 
 const HomePage = () => {
   

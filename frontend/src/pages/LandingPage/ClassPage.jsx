@@ -1,7 +1,7 @@
 import {Container, Row, Col} from "react-bootstrap"
-import {semuaKelas} from "../data/index"
+import {semuaKelas} from "../../data/index"
 
-import FaqComponent from "../components/FaqComponent"
+import FaqComponent from "../../components/FaqComponent"
 
 const ClassPage = () => {
   return  (

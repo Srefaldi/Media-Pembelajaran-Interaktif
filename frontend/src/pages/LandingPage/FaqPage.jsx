@@ -1,4 +1,4 @@
-import FaqComponent from "../components/FaqComponent"
+import FaqComponent from "../../components/FaqComponent"
 
 
 const FaqPage = () => {
