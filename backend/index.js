@@ -1,11 +1,25 @@
-const express = require('express');
+import db from "./config/Database.js";
+import express from "express";
+import router from "./routes/index.js"
+import dotenv from "dotenv"
+dotenv.config();
 const app = express();
-const port = 3001; // Anda bisa mengubah port ini
 
-app.get('/', (req, res) => {
-  res.send('Hello from Node.js backend!');
-});
+async function startApp() {
+  try {
+    await db.authenticate();
+    console.log('Database Connected');
+    
 
-app.listen(port, () => {
-  console.log(`Server is running on http://localhost:${port}`);
-});
+  } 
+  
+  catch (error) {
+    console.log(error);
+  }
+}
+
+app.use(express.json())
+app.use(router);
+startApp();
+
+app.listen(5000, () => console.log('Server Running on port 5000'));

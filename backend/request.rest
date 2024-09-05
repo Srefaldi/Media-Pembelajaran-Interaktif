@@ -1,0 +1,14 @@
+GET http://localhost:5000/user
+
+###
+POST http://localhost:5000/user
+Content-Type: application/json
+
+
+{
+
+    "name" : "Sopia Refaldi",
+    "email" : "email@gmail.com",
+    "password" : "123456",
+    "confPassword" : "123456"
+}
