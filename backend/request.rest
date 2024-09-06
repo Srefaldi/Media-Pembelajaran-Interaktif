@@ -8,7 +8,22 @@ Content-Type: application/json
 {
 
     "name" : "Sopia Refaldi",
-    "email" : "email@gmail.com",
+    "email" : "sopia@gmail.com",
     "password" : "123456",
     "confPassword" : "123456"
 }
+
+
+###
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email" : "sopia@gmail.com",
+    "password" : "123456"
+
+}
+
+
+###
+GET http://localhost:5000/token
