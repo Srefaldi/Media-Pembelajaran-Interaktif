@@ -1,29 +1,24 @@
-GET http://localhost:5000/user
+GET http://localhost:5000/users
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsIm5hbWUiOiJTb3BpYSBSZWZhbGRpIiwiZW1haWwiOiJzb3BpYTFAZ21haWwuY29tIiwiaWF0IjoxNzI1NjA1NDEzLCJleHAiOjE3MjU2MDU0Mzh9.iHrZLeYZX6loC2eM4R2800PCsHlnPZ1iC4ttcPByBmM
 
 ###
-POST http://localhost:5000/user
+POST http://localhost:5000/users
 Content-Type: application/json
 
-
 {
-
     "name" : "Sopia Refaldi",
-    "email" : "sopia@gmail.com",
+    "email" : "sopia1@gmail.com",
     "password" : "123456",
     "confPassword" : "123456"
 }
-
-
 ###
 POST http://localhost:5000/login
 Content-Type: application/json
 
 {
-    "email" : "sopia@gmail.com",
+    "email" : "sopia1@gmail.com",
     "password" : "123456"
-
 }
-
 
 ###
 GET http://localhost:5000/token
