@@ -11,6 +11,12 @@ import ScrollToTop from './components/ScrollOnTop.jsx';
 
 import 'animate.css';
 
+
+import "bulma/css/bulma.css"
+import axios from "axios"
+
+axios.defaults.withCredentials = true
+
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>

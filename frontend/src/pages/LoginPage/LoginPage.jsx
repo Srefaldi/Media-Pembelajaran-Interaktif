@@ -1,30 +1,36 @@
-import { useState } from 'react'
-import { Link } from 'react-router-dom'
 
-function RegisterPage() {
-    // const [values, setValues] = useState({
-    //     name : ''
-    // })
+const LoginPage = () => {
   return (
-    <div className='d-flex justify-content-center align-items-center bg-primary vh-100'>
-        <div className='bg-white p-3 rounded w-25'>
-            <h2>Login</h2>
-            <form>
-                <div className='mb-3'>
-                    <label htmlFor='name'><strong>Name</strong></label>
-                    <input type="text" placeholder='Masukan Nama' name="name" className='form-control rounded-0' />
+
+
+        <div className="hero-body">
+            <div className="container">
+                <div className="columns is-centered">
+                    <div className="column is-4-dekstop">
+                        <form action="" className="box">
+                            <div className="field mt-5">
+                                <label  className="label">Email or Username</label>
+                                <div className="controls">
+                                    <input type="text" className="input" placeholder="Username" />
+                                </div>
+                            </div>
+                            <div className="field mt-5">
+                                <label  className="label">Password</label>
+                                <div className="controls">
+                                    <input type="password" className="input" placeholder="*****" />
+                                </div>
+                            </div>
+                            <div className="field mt-5">
+                                <button className="button is-succes is-full-width">Login</button>
+                            </div>
+                            
+                        </form>
+                    </div>
                 </div>
-                <div className='mb-3'>
-                    <label htmlFor='password'><strong>Password</strong></label>
-                    <input type="password" placeholder='Masukan password' name="password" className='form-control rounded-0' />
-                </div>
-                <button type='submit' className='btn btn-succes w-100 rounded-0'>Login</button>
-                <p>Lorem, ipsum dolor.</p>
-                <Link to="/register" className='btn btn-default border w-100 bg-light rounded-0 text-decoration-none'>Daftar</Link>
-            </form>
+                
+            </div>
         </div>
-    </div>
-  )
+)
 }
 
-export default RegisterPage
+export default LoginPage

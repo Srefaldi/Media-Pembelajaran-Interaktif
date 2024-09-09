@@ -1,4 +1,4 @@
-import jwt, { decode } from "jsonwebtoken";
+import jwt from "jsonwebtoken";
 import Users from "../models/UserModels.js"
 
 
@@ -18,9 +18,11 @@ export const refreshToken = async(req, res) =>{
             const name = user[0].name;
             const email = user[0].email;
 
-            const accesToken = jwt.sign({userId, name, email}, process.env.ACCES_TOKEN_SECRET, {
+            const accesToken = jwt.sign({userId, name, email}, process.env.ACCESS_TOKEN_SECRET, {
                 expiresIn: '15s'
             });
+            
+            
             res.json({ accesToken });
         });
     } catch(error){
