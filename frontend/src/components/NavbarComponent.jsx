@@ -2,9 +2,16 @@ import {useState, useEffect} from "react"
 import {Navbar, Container, Nav} from "react-bootstrap"
 import {navLinks} from "../data/index"
 import {NavLink} from "react-router-dom"
-
+import { useNavigate } from "react-router-dom";
 const NavbarComponent = () => {
+  const navigate = useNavigate(); 
 
+  const handleLoginClick = () => {
+    navigate('/login'); 
+  };
+  const handleRegisterClick = () => {
+    navigate('/register'); 
+  };
   const [changeColor, setChaneColor] = useState(false);
 
   const changeBackgroundColor = () => {
@@ -40,8 +47,11 @@ const NavbarComponent = () => {
             
           </Nav>
           <div className="text-center">
-            <button className="btn btn-outline-danger rounded-1">Login</button>
-          </div>
+          <button 
+        className="btn btn-outline-danger rounded-1"onClick={handleLoginClick}>Login</button>
+        <button 
+        className="btn btn-outline-danger rounded-1"onClick={handleRegisterClick}>Register</button>
+        </div>
 
         </Navbar.Collapse>
       </Container>

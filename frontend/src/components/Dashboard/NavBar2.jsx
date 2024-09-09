@@ -3,7 +3,20 @@ import {Navbar, Container, Nav} from "react-bootstrap"
 import {navLinks} from "../../data/index"
 import {NavLink} from "react-router-dom"
 
+import axios from "axios"
+import { useNavigate } from "react-router-dom"
+
 const NavBar2 = () => {
+  const navigate = useNavigate()
+
+  const Logout = async () => {
+    try {
+      await axios.delete('http://localhost:5000/logout');
+      navigate('/login'); // Gunakan navigate dengan path tujuan, bukan navigate.push
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
   const [changeColor, setChaneColor] = useState(false);
 
@@ -40,7 +53,7 @@ const NavBar2 = () => {
             
           </Nav>
           <div className="text-center">
-            <button className="btn btn-outline-danger rounded-1">Logout</button>
+            <button onClick={Logout} className="btn btn-outline-danger rounded-1">Logout</button>
           </div>
 
         </Navbar.Collapse>
